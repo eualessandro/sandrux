@@ -212,3 +212,6 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ---
 
 ⭐ Se este projeto te ajudou, considere dar uma estrela no repositório! 
+=======
+# alebr
+>>>>>>> 7eafc6e2977eda07a8019bcd21bfde20bea606aa
