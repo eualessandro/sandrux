@@ -1,0 +1,15 @@
+/* Estilos globais para aumentar espaçamento entre blog e footer */
+#smooth-content > main > section.blog.style2 {
+  margin-bottom: 4rem !important;
+}
+
+/* Alternativa mais específica se necessário */
+#smooth-content > main > section.blog.style2 + footer {
+  margin-top: 3rem;
+}
+
+/* Ou aumentar o padding do footer */
+#smooth-content > footer {
+  padding-top: 2rem;
+}
+

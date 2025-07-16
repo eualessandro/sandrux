@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Design de Produtos Digitais",
+    "img": "/assets/imgs/serv-icons/3.png",
+    "desc": "Workshop ao vivo onde definimos os principais problemas e desafios antes de construir um plano estratégico para seguir em frente.",
+    "link": "/page-services-details"
+  },
+  {
+    "title": "Desenvolvimento Web",
+    "img": "/assets/imgs/serv-icons/4.png",
+    "desc": "Workshop ao vivo onde definimos os principais problemas e desafios antes de construir um plano estratégico para seguir em frente.",
+    "link": "/page-services-details"
+  },
+  {
+    "title": "Design de Marca",
+    "img": "/assets/imgs/serv-icons/5.png",
+    "desc": "Workshop ao vivo onde definimos os principais problemas e desafios antes de construir um plano estratégico para seguir em frente.",
+    "link": "/page-services-details"
+  },
+  {
+    "title": "Design UI-UX",
+    "img": "/assets/imgs/serv-icons/5.png",
+    "desc": "Workshop ao vivo onde definimos os principais problemas e desafios antes de construir um plano estratégico para seguir em frente.",
+    "link": "/page-services-details"
+  }
+]
