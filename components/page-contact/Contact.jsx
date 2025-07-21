@@ -8,6 +8,41 @@ function Contact() {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('/api/contato', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        // Redirecionar para a página de agradecimento após 1 segundo
+        setTimeout(() => {
+          window.location.href = '/obrigado';
+        }, 1000);
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -61,12 +96,20 @@ function Contact() {
               <form
                 id="contact-form"
                 className="form2"
-                method="POST"
-                action="https://formsubmit.co/alessandroz.br@gmail.com"
+                onSubmit={handleSubmit}
               >
-                <input type="hidden" name="_next" value="https://sandrux-dx870ig8o-eualessandros-projects.vercel.app/obrigado" />
-                <input type="hidden" name="_subject" value="Nova mensagem do portfólio" />
-                <input type="hidden" name="_template" value="table" />
+                <div className="messages">
+                  {submitStatus === 'success' && (
+                    <div className="alert alert-success">
+                      Mensagem enviada com sucesso! Redirecionando...
+                    </div>
+                  )}
+                  {submitStatus === 'error' && (
+                    <div className="alert alert-danger">
+                      Erro ao enviar mensagem. Tente novamente.
+                    </div>
+                  )}
+                </div>
 
                 <div className="controls row">
                   <div className="col-lg-6">
@@ -124,8 +167,14 @@ function Contact() {
                     </div>
                     <div className="text-center">
                       <div className="mt-30">
-                        <button type="submit">
-                          <span className="text">Enviar Mensagem</span>
+                        <button
+                          type="submit"
+                          className="butn butn-full butn-bord radius-30"
+                          disabled={isSubmitting}
+                        >
+                          <span className="text">
+                            {isSubmitting ? 'Enviando...' : 'Vamos Conversar'}
+                          </span>
                         </button>
                       </div>
                     </div>
