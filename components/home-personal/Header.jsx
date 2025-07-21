@@ -80,7 +80,7 @@ function Header() {
           </div>
           <div className="item">
             <h6 className="sub-title mb-10">Localização :</h6>
-            <span className="p-color">Vicente Pires – DF</span>
+            <span className="p-color">Brasília – DF</span>
           </div>
         </div>
       </div>

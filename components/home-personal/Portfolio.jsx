@@ -61,7 +61,7 @@ function Portfolio() {
             </div>
             <div className="ml-auto vi-more">
               <span className="tag mr-20" style={{ backgroundColor: '#ff6b35', color: 'white', padding: '8px 16px', borderRadius: '20px', fontSize: '12px' }}>
-                Estou atualizando o portfólio
+                Em atualização
               </span>
               <a
                 href="/portfolio"
